@@ -6,12 +6,34 @@
     use Monolog\Logger;
     use Monolog\Handler\StreamHandler;
 
-    $log = new Logger("myLogger");
-    $log->pushHandler(new StreamHandler('php://stdout', Level::Warning));
+    class ConsoleHandler{
+        private $log;
 
-    // add records to the log
-    $log->warning('Foo');
-    $log->error('Bar');
+        /**
+         * @return Logger
+         */
+        public function getLog()
+        {
+            return $this->log;
+        }
+
+        /**
+         * @param Logger $log
+         */
+        public function setLog($log)
+        {
+            $this->log = $log;
+        }
+
+
+
+        public function __construct(){
+
+            $this->log = new Logger("ConsoleLogger");
+            $this->log->pushHandler(new StreamHandler('php://stdout', Level::Warning));
+        }
+    }
+
 
 
 
