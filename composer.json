@@ -1,0 +1,17 @@
+{
+    "name": "joe89/composer-study",
+    "autoload": {
+        "psr-4": {
+            "Joe89\\ComposerStudy\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "jayroe",
+            "email": "jayroe@sina.com"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^3.2"
+    }
+}
