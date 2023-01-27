@@ -1,5 +1,7 @@
 {
-    "name": "joe89/composer-study",
+    "name": "jayroe/composer-study",
+    "description": "test project",
+    "license": "mit",
     "autoload": {
         "psr-4": {
             "Joe89\\ComposerStudy\\": "src/"
